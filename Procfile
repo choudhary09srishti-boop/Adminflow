@@ -1,1 +1,1 @@
-web: playwright install chromium && python main.py
+web: python -c "import os; from admin_panel.app import app; import api.routes; app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8000)), debug=False)"
